@@ -18,6 +18,4 @@ THEN
 
 ELSE
     echo "Mysql is already installed , nothing to do"
-
-
 fi 
