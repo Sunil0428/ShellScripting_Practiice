@@ -7,7 +7,7 @@ then
     exit 1
 fi
 
-dnf installed mysql -y
+dnf install mysql -y
 
 if [ $? -ne 0 ];
     then
