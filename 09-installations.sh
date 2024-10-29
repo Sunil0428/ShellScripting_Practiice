@@ -27,7 +27,7 @@ VALIDATE()
 
 CHECKUSER $USERID
 
-dnf install mysql -y
+dnf installed mysql -y
 
 if [ $? -ne 0 ];
     then
