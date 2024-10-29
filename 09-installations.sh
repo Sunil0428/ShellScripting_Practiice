@@ -10,6 +10,7 @@ CHECKUSER()
     if [ $1 -ne 0 ]
     then 
         echo "$R please use the root access for running the script $N"
+        exit 1
     fi
 }
 
