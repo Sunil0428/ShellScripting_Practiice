@@ -1,6 +1,6 @@
 !#/bin/bash
-person1="Sunil"
-person2="Bhuvana"
+person1="DARSHANA"
+person2="JAI"
 
 echo "${person1} : Hi Helloo "
 echo "${person2} :Helloo"
