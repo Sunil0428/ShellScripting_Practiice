@@ -28,13 +28,7 @@ CHECKUSER $USERID
 for package in $@
 {
 
-    if [ $package != "nginx" ]
-    then
-        $package --version
-    else
-        $package -v
-    fi
-
+    dnf list installed $package
     if [ $? -ne 0 ]
     then  
         echo -e "$R $package is not there in the system, so installing it $N"
