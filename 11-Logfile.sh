@@ -2,7 +2,7 @@
 LOGPATH="/var/log/Shell-scripting"
 LOGFILENAME=$( echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S" ) 
-LOGFILE="$LOGPATH/$LOGFILENAME-$TIMESTAMP"
+LOGFILE="$LOGPATH/$LOGFILENAME-$TIMESTAMP.log"
 
 USERID=$(id -u)
 R="\e[31m"
@@ -13,7 +13,7 @@ CHECKUSER()
 {
     if [ $1 -ne 0 ]
     then    
-        echo -e "$R Please use the root access to run this script $N" &>> $LOGFILE
+        echo -e "$R Please use the root access to run this script $N"
         exit 1
     fi
 }
