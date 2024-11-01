@@ -44,7 +44,7 @@ mkdir -p $LOGPATH
 
 for package in $@
 do
-    dnf list installed $package
+    dnf list installed $package &>> $LOGFILE
     if [ $? -ne 0 ]
     then  
         echo -e "$package is not there in the system, $R installing it $N" &>> $LOGFILE
