@@ -26,16 +26,15 @@ VALIDATE()
 CHECKUSER $USERID
 
 for package in $@
-{
-
+do
     dnf list installed $package
     if [ $? -ne 0 ]
     then  
-        echo -e "$R $package is not there in the system, so installing it $N"
-        dnf install $package
+        echo -e "$package is not there in the system, $R installing it $N"
+        dnf install $package -y
         VALIDATE $? $package
     else
-        echo -e "$B $package is already there in the system, nothing to do $N"
+        echo -e "$package is already there in the system $B nothing to do $N"
     fi
-}
+done
 
