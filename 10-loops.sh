@@ -27,7 +27,7 @@ CHECKUSER $USERID
 
 for package in $@
 {
-    dnf installed $package
+    $package --version
     if [ $? -ne 0 ]
     then  
         echo -e "$R $package is not there in the system, so installing it $N"
