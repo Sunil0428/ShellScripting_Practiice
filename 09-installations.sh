@@ -29,7 +29,7 @@ CHECKUSER $USERID
 
 dnf installed mysql -y
 
-if [ $? -ne 0 ];
+if [ $? -ne 0 ]
     then
         echo -e "$R Mysql is not installed yet, installing it now $N"
         dnf install mysql
