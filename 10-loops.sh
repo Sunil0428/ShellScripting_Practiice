@@ -28,7 +28,7 @@ CHECKUSER $USERID
 for package in $@
 {
 
-    if [ $package -ne nginx ]
+    if [ $package != "nginx" ]
     then
         $package --version
     else
