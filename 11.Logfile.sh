@@ -1,6 +1,7 @@
 #!/bin/bash
 LOGPATH="/var/log/Shell-scripting"
-LOGFILENAME= $0 | cut -d "." -f1
+FILe=$0
+LOGFILENAME= $($FILe | cut -d "." -f1)
 # TIMESTAMP= $date 
 # LOGFILE="$LOGPATH/$LOGFILENAME-$TIMESTAMP"
 echo "$LOGFILENAME"
