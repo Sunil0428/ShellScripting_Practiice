@@ -8,7 +8,7 @@ CHECKUSER()
 {
     if [ $1 -ne 0 ]
     then    
-        echo -e "$R Please use the rrot access to run this script $N"
+        echo -e "$R Please use the root access to run this script $N"
         exit 1
     fi
 }
