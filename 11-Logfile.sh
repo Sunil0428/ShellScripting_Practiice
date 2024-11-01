@@ -1,8 +1,9 @@
 #!/bin/bash
 LOGPATH="/var/log/Shell-scripting"
-LOGFILENAME=$( echo $0 | cut -d "." -f1 )
+SCRIPTNAME=$( echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S" ) 
-LOGFILE="$LOGPATH/$LOGFILENAME-$TIMESTAMP.log"
+LOGFILE="$LOGPATH/$SCRIPTNAME-$TIMESTAMP.log"
+mkdir -p $LOGPATH
 
 USERID=$(id -u)
 R="\e[31m"
@@ -40,7 +41,6 @@ CHECKUSER $USERID
 
 USAGE $#
 
-mkdir -p $LOGPATH
 
 for package in $@
 do
