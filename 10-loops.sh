@@ -10,6 +10,7 @@ CHECKUSER()
     then    
         echo -e "$R Please use the rrot access to run this script $N"
         exit 1
+    fi
 }
 
 VALIDATE()
