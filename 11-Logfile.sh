@@ -4,9 +4,6 @@ LOGFILENAME=$( echo $0 | cut -d "." -f1 )
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S" ) 
 LOGFILE="$LOGPATH/$LOGFILENAME-$TIMESTAMP"
 
-mkdir -p $LOGPATH
-
-
 USERID=$(id -u)
 R="\e[31m"
 B="\e[32m"
@@ -42,6 +39,8 @@ USAGE()
 CHECKUSER $USERID
 
 USAGE $#
+
+mkdir -p $LOGPATH
 
 for package in $@
 do
