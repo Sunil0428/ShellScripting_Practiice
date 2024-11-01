@@ -31,7 +31,7 @@ USAGE()
 {
     if [ $1 -eq 0 ]
     then
-        echo "$R USAGE::sh 11-Logfile.sh package 1 package2 package3 ......$N" 
+        echo -e "$R USAGE::sh 11-Logfile.sh package 1 package2 package3 ......$N" 
         exit 1
     fi
 }
